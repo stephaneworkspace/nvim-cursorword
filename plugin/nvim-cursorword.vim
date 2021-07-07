@@ -13,7 +13,7 @@ function FunctionDef
   :call coc#float#create_dialog(['w.cursorword' ,'Sert à implémenter I'], #{close: 0})
 endfunction
 function FunctionUnDef
-  :call coc#float#close(#{})
+  :call coc#float#close_all(#{all: 1})
 endfunction
 
 augroup CursorWord
