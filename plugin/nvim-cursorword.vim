@@ -10,10 +10,10 @@ endif
 let g:loaded_cursorword = 1
 
 function FunctionDef
-  :call coc#float#create_dialog(['w.cursorword' ,'Sert à implémenter I'], #{winid: 111})
+  :call coc#float#create_dialog(['w.cursorword' ,'Sert à implémenter I'], #{close: 0})
 endfunction
 function FunctionUnDef
-  :call coc#float#close(#{winid: 111})
+  :call coc#float#close(#{})
 endfunction
 
 augroup CursorWord
@@ -22,5 +22,5 @@ augroup CursorWord
   autocmd VimEnter :exec FunctionDef()
   autocmd CursorMoved,CursorMovedI * lua require('nvim-cursorword').matchadd()
   autocmd WinLeave * lua require('nvim-cursorword').matchdelete()
-  autocmd CursorMoved,CursorMovedI,WinLeave :exec FunctionUnDef()
+  autocmd WinLeave * :exec FunctionUnDef()
 augroup END
