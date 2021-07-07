@@ -4,6 +4,7 @@ local M = {}
 
 local fn = vim.fn
 local api = vim.api
+local w = wim.w
 
 function M.echo()
     return vim.w.cursorword
