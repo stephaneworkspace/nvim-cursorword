@@ -6,9 +6,8 @@ local fn = vim.fn
 local api = vim.api
 
 function M.echo()
-    print('a')
-    print(vim.w.cursorword_match_id)
-    return vim.w.cursorword_match_id
+    print(cursorword)
+    return cursorword
 end
 
 function M.highlight()
