@@ -10,7 +10,7 @@ endif
 let g:loaded_cursorword = 1
 
 function FunctionDef
-  :call coc#float#create_dialog([w.cursorword ,'Sert à implémenter I'], #{close: 1})
+  :call coc#float#create_dialog(['w.cursorword' ,'Sert à implémenter I'], #{close: 1})
 endfunction
 function FunctionUnDef
   :call coc#float#close_all(1)
