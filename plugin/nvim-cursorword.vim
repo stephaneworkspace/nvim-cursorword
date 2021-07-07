@@ -19,6 +19,6 @@ endfunction
 augroup CursorWord
   autocmd!
   autocmd VimEnter,ColorScheme * lua require('nvim-cursorword').highlight() * exec FunctionDef()
-  autocmd CursorMoved,CursorMovedI * lua require('nvim-cursorword').matchadd()
+  autocmd CursorMoved,CursorMovedI * lua require('nvim-cursorword').matchadd() * exec FunctionUnDef()
   autocmd WinLeave * lua require('nvim-cursorword').matchdelete() * exec FunctionUnDef()
 augroup END
