@@ -5,6 +5,10 @@ local M = {}
 local fn = vim.fn
 local api = vim.api
 
+function M.echo()
+    return vim.w.cursorword_match_id
+end
+
 function M.highlight()
   if fn.hlexists("CursorWord") == 0 then
     vim.cmd("highlight CursorWord term=underline cterm=underline gui=underline")
