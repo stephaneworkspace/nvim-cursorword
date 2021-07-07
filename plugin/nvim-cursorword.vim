@@ -22,5 +22,5 @@ augroup CursorWord
   autocmd VimEnter :exec FunctionDef()
   autocmd CursorMoved,CursorMovedI * lua require('nvim-cursorword').matchadd()
   autocmd WinLeave * lua require('nvim-cursorword').matchdelete()
-  autocmd WinLeave * :exec FunctionUnDef()
+  autocmd WinLeave :exec FunctionUnDef()
 augroup END
