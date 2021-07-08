@@ -18,7 +18,7 @@ let g:loaded_cursorword = 1
 
 augroup CursorWord
   autocmd!
-  autocmd VimEnter,ColorScheme * lua require('nvim-cursorword').highlight() * exec FunctionDef()
-  autocmd CursorMoved,CursorMovedI * lua require('nvim-cursorword').matchadd() * exec FunctionUnDef()
-  autocmd WinLeave * lua require('nvim-cursorword').matchdelete() * exec FunctionUnDef()
+  autocmd VimEnter,ColorScheme * lua require('nvim-cursorword').highlight()
+  autocmd CursorMoved,CursorMovedI * lua require('nvim-cursorword').matchadd()
+  autocmd WinLeave * lua require('nvim-cursorword').matchdelete()
 augroup END
